@@ -16,7 +16,6 @@ class Loader {
         this.options = options;
     }
 
-
     public getResp<T>({ endpoint, options = {} }: RequestOptions, callback: ResponseCallback<T>): void {
         this.load<T>('GET', endpoint, callback, options);
     }
