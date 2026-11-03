@@ -1,35 +1,111 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     color: #fff;
     background: #17181c;
     font-family: sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.wrapper {
+    max-width: 1360px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
 header {
-    padding: 10px 30px;
+    padding: 10px 0;
 }
 
 header h1 {
     font-size: 40px;
     font-weight: 800;
+    margin: 0;
+}
+
+main {
+    flex: 1;
 }
 
 footer {
-    height: 100px;
+    min-height: 100px;
+    padding: 1rem 0;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+.footer__content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background: #3333334e;
+    padding: 10px 20px;
+    border-radius: 50px;
+    gap: 1rem;
+}
+
+.footer__github,
+.footer__course {
+    color: #a2a2a2;
+    text-decoration: none;
+    transition: 0.25s;
+    display: inline-flex;
+    align-items: center;
+}
+
+.footer__github:hover,
+.footer__github:focus,
+.footer__course:hover,
+.footer__course:focus {
+    transform: translateY(-0.25em);
+}
+
+.footer__logo {
+    height: 30px;
+    display: block;
+}
+
+.footer__year {
+    color: #a2a2a2;
+}
+
 footer .copyright {
     font-size: 14px;
-    color: #333;
+    color: #555;
     text-align: center;
+    margin: 0;
 }
+
 footer .copyright a {
-    color: #444;
+    color: #a2a2a2;
+    text-decoration: none;
+    transition: 0.25s;
 }
-footer .copyright a:hover {
+
+footer .copyright a:hover,
+footer .copyright a:focus {
     color: #555;
 }
-footer .copyright:before {
-    content: '©';
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 400px) {
+    .footer__content {
+        font-size: 0.85rem;
+        padding: 10px;
+        justify-content: center;
+    }
 }
